@@ -11,6 +11,130 @@
 body {
     width: 100%;
     height: 100vh;
+    background-image: url(./src/img/Background.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 66px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 32px 0;
+    font-family: 'Roboto', 'Satoshi', sans-serif;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.branding {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 900;
+}
+
+.branding img {
+    height: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    height: 100%;
+}
+
+.header-actions a {
+    position: relative;
+    cursor: pointer;
+    transform-origin: center;
+    transition: transform 0.5s;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header-actions a:hover {
+    transform: scale(1.1);
+}
+
+.header-actions a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30%;
+    width: 110%;
+    background-image: url(./src/decorators/wave.svg);
+    height: 5px;
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    transition: clip-path 0.2s ease-in-out;
+}
+
+.header-actions a:hover::after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+
+.header-divider {
+    width: 2px;
+    height: 90%;
+    border-radius: 5px;
+    background: var(--text-color);
+}
+
+.theme-switcher {
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-size: contain;
+    background-image: url(./src/icons/sun.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+    transform-origin: center;
+}
+
+.theme-switcher:hover {
+    transform: scale(1.1) rotate(-20deg);
+}
+
+.theme-switcher.active {
+    background-image: url(./src/icons/moon.svg);
+}
+
+.header-profile {
+    background-image: url(./src/icons/icon.svg);
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center;
+}
+
+.header-profile:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 840px) 
+{
+    .header-brand {
+        display: none;
+    }
 }
