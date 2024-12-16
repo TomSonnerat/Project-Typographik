@@ -1,0 +1,25 @@
+{
+  "name": "typographik",
+  "version": "1.0.0",
+  "description": "A website to assemble 3d custom keyboards",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomSonnerat/Project-Typographik.git"
+  },
+  "author": "Brase",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/TomSonnerat/Project-Typographik/issues"
+  },
+  "homepage": "https://github.com/TomSonnerat/Project-Typographik#readme",
+  "dependencies": {
+    "gsoc": "^0.9.0",
+    "three": "^0.171.0",
+    "vite": "^6.0.3"
+  }
+}
