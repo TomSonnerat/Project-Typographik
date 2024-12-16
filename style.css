@@ -138,3 +138,122 @@ nav {
         display: none;
     }
 }
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 50%;
+    padding-top: 15px;
+    color: var(--text-color)
+}
+
+.presentation h1 {
+    max-width: 80%;
+    font-size: 60px;
+    font-family: 'Satoshi', 'Roboto', sans-serif;
+    font-weight: 900;
+    line-height: 90px;
+    letter-spacing: 5px;
+}
+
+.presentation .main-modular {
+    font-family: 'Segoe Script';
+    font-weight: 400;
+}
+
+.presentation .main-modular#second {
+    font-family: 'Roboto';
+}
+
+.presentation h1 u {
+    font-weight: 400;
+}
+
+.presentation h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    font-family: 'Satoshi', 'Roboto', sans-serif;
+    font-weight: 900;
+    max-width: 70%;
+}
+
+.build-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 30px 0px;
+    transform: translateX(-10px);
+}
+
+.build-cta-effect {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 25px 10px 10px;
+    transition: all 0.3s;
+}
+
+.build-cta-effect .bg {
+    background: var(--text-color);
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.build-cta-effect:hover {
+    padding-right: 10px;
+    color: black;
+}
+
+.build-cta-effect:hover .bg {
+    height: 100%;
+    width: 100%;
+    transform: translate(0, -50%);
+}
+
+.build-cta-effect .bg:before, .build-cta-effect .bg:after {
+    content: '';
+    height: 2px;
+    width: 10px;
+    background: var(--text-color);
+    position: absolute;
+    right: -2px;         
+    transition: all 0.3s;
+}
+
+.build-cta-effect .bg:before {
+    bottom: 3px;
+    transform: rotate(45deg);
+}
+.build-cta-effect .bg:after{
+    top: 3px;
+    transform: rotate(-45deg);
+}
+
+.build-cta-effect:hover .bg:before,
+.build-cta-effect:hover .bg:after{
+    right: 0;
+}
+
+.build-cta-effect:hover .bg:before{
+    bottom: 6px;
+}
+
+.build-cta-effect:hover .bg:after{
+    top: 6px;
+} 
